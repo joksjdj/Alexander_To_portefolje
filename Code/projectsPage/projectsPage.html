@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="iframePage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="projekt.css">
+    <link rel="stylesheet" href="/Code\main\main.css">
+    <link rel="icon" type="image/x-icon" href="/Images\SVG\Fullbody_outline.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap" rel="stylesheet">
+
+    <title>Prosjekter</title>
+</head>
+
+<body>
+
+    <div class="boxes">
+        <h1 id="main">Tidligere prosjekter</h1>
+        
+        <div id="jobb">
+            <button id="button1">
+                <img src="/Images\Logo_Color_AlexanderTo.svg" alt="">
+            </button>
+            <button id="button2">
+                <img src="/Images\Logo_panda.svg" alt="">
+            </button>
+            <button id="button3">
+                <img src="/Images\SVG\Logo_Mavericks.svg" alt="">
+            </button>
+            <button id="button4">
+                <img src="/Images\Screenshot 2025-05-05 093325.png" alt="">
+            </button>
+            <button id="button5">
+                <img src="/Prosjekter\MinecraftUke7\MinecraftLogo.png" alt="">
+            </button>
+        </div>
+
+    <div id="språk" class="språkclose">
+        <svg id="språkclose" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+
+        <div id="button1Text">
+            <img src="/Images\Logo_Color_AlexanderTo.svg" alt="">
+            <p>Dette hvar en skoleoppgave oppgave hvor jeg skulle lage en logo for Snurr Danseskole.</p>
+        </div>
+
+        <div id="button2Text">
+            <iframe src="/Prosjekter\Webutvikling_Lacrosse_uke_38" title="Iframe Example"></iframe>
+            <p>Oslo Lacrosse hvar det første skole prosjektet hvor vi skule lage en nettside med en annen elev.</p>
+        </div>
+
+        <div id="button3Text">
+            <img src="/Images\SVG\Logo_Mavericks.svg" alt="">
+            <p>Dette hvar en skoleoppgave oppgave hvor jeg skulle lage en logo for mavericks.</p>
+        </div>
+
+        <div id="button4Text">
+            <p>En karakter i fordypnings oppgaven min.</p>
+            <img src="/Images\MageFinished.png" alt="">
+            <img src="/Images\Screenshot 2025-05-02 121203.png" alt="">
+            <img src="/Images\Screenshot 2025-05-05 093325.png" alt="">
+        </div>
+
+        <div id="button5Text">
+            <video controls>
+                <source src="/Prosjekter\MinecraftUke7\Minecraft_Finished.mp4" type="video/mp4">
+            </video>
+        </div>
+
+    </div>
+</body>
+
+<script>
+
+    const kode = document.getElementById("språk");
+    const button = document.getElementById("jobb");
+    const closeButton = document.getElementById("språkclose");
+
+    function isVideoPlaying(video) {
+        return (
+            video &&
+            !video.paused &&
+            !video.ended &&
+            video.readyState >= 2
+        );
+    }
+
+    document.querySelectorAll("#jobb button").forEach((button) => {
+        button.addEventListener("click", () => {
+            console.log("Button clicked:", button.id);
+
+            let text = kode.querySelector(`#${button.id}Text`);
+
+            console.log(text.id);
+
+            text.classList.add("textStyle");
+            text.style.visibility = "visible";
+
+            text.appendChild(closeButton);
+
+            closeButton.addEventListener("click", () => {
+                text.classList.remove("textStyle");
+                text.style.visibility = "hidden";
+
+                const video = document.querySelector("video");
+
+                if (isVideoPlaying(video)) {
+                    console.log("Video is playing");
+
+                    video.pause();
+                }
+
+            });
+        });
+    });
+
+</script>
+
+</html>

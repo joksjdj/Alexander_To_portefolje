@@ -1,0 +1,11 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video {
+    border: 20px solid var(--base-variant);
+    border-radius: 2vi;
+    box-shadow: 0px 0px 36px 50px var(--primary-color);
+}

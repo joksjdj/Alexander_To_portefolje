@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Logo_panda-1x1.ico">
+    <title>Oslo Lacrosse</title>
+</head>
+
+<body id="fakta" class="fakta">
+
+    <div>
+        <img src="Logo_panda.svg" id="backimg">
+    </div>
+
+    <header>
+
+        <button onclick="fakta()" id="buttonlogo">
+            <img src="Logo_panda.svg" class="logo">
+        </button>
+
+        <button onclick="sidebar()" class="sidebutton">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        </button>
+
+        <div id="sidebar" class="sidebar">
+
+            <h1>Menu</h1>
+
+            <P onclick="bilder()" id="bilde">Bilde Galleri</P>
+
+            <p onclick="planer()" id="plan">Planer</p>
+
+            <p onclick="recruit()" id="hi">Rekrutering</p>
+
+        </div>
+
+    </header>
+
+    <div>
+        <img src="Logo.svg" class="recruit">
+    </div>
+
+    
+        <div id="sport">
+            <h1>Lacrosse</h1>
+            <p>
+            Lacrosse er en idrett med lang og stolt historie, helt tilbake til 1600-tallet. Dens opphav var som et spill mellom ulike grupper av urfolk i Nord Amerika og idrettens seremonier er fremdeles preget av deres rike tradisjoner. 
+            Idretten er en lagbasert ballsport som spilles med ti spillere på hvert lag, på en bane omtrent av samme størrelse som en vanlig fotballbane. Det finnes også innendørs lacrosse, kalt indoor eller box lacrosse. Spillerne er utstyrt med køller med en nettlomme i enden (la crosse) som brukes til å fange og kaste ballen mellom spillerne og i mål. Taktisk minner spillet mye om ishockey, hvor du har et offensivt spill som handler om å sette opp spill og skaffe medspillere åpne skudd, mens keeper er beskyttet av en vernet sone rundt målet. For herrer er spillet er svært fysisk og det brukes derfor beskyttelsesutstyr og hjelm.
+            For kvinner er spillet noe annerledes. Nettlommen på crossen er ikke tillatt så dyp som for gutter dette gjør det enklere å slå ballen ut. Reglene for fysisk kontakt er også mye strengere og jentene bruker dermed mindre beskyttelsesutstyr.
+            Lacrosse i Norge har i dag ca 1.000 aktive spillere i forbundets 16 medlemsklubber. Klubbene er i stor grad tilknyttet universitet og høyskoler, men det er også frittstående klubber. Seriespillet foregår i flere byer som helgeturneringer, med kvalifisering til Norgesmesterskapet som er i juni. I tillegg er det studentmesterskap og mindre turneringer. Forbundet organiserer landslag både for herrer og kvinner, med deltagelse i EM og VM, med gode resultater.
+            Kilde: https://amerikanskeidretter.no/lacrosse/
+            </p>
+        </div>
+
+        <div id="lag">
+            <h1>VI TRENGER DEG!</h1>
+            <p>
+            <br>
+            Oslo lacrosse ble grunnlagt i 2016 av tidligere studentspillere, og er det første damelaget i Norge som ikke hører til et universitet.
+            Vi er et damelag som holder til i Oslo med jenter som har spilt alt fra 0 til 10+ år. Målet vårt er alltid NM-finalen, være mange på trening og ha det gøy sammen når vi spiller.
+            Vi har treninger to ganger i uken, deltar i eliteserien og deltar som regel på utlandsturnering minst én gang i året.
+            Oslo Lacrosse er et selvdrevet lag og har tre spillende trenere som har fordelt ansvarsområde over angrep, midtbane og forsvar. 
+            Vi tar imot alle nye spillere, enten om man har lang erfaring eller ønsker å prøve på noe nytt.
+            Velkommen til oss!
+            </br>
+            <br>
+            Kontaktinfo
+            </br>
+            <br>
+            Leder: Stina Bjørnenæs, stina@oslolax.no.
+            </br>
+            +47 77 55 66 22 
+            <br></br>
+
+            </p>
+        </div>
+
+    <div id="bildene">
+        <img src="shotongoal.jpg" id="goal">
+        <img src="smiling_girls.jpg" id="smile">
+        <img src="teampic2.jpg" id="team">
+    </div>
+
+    <img src="Screenshot 2024-09-19 115305.png" id="planen">
+
+</body>
+<script>
+    
+    function sidebar() {
+        var element = document.getElementById("sidebar");
+        element.classList.toggle("sidebarExtend");
+    }
+
+    function recruit() {
+        var element = document.getElementById("fakta");
+        element.classList.remove("bilder", "planer", "laget", "fakta");
+        element.classList.add("laget");
+    }
+
+    function bilder() {
+        var element = document.getElementById("fakta");
+        element.classList.remove("bilder", "planer", "laget", "fakta");
+        element.classList.add("bilder");
+    }
+
+    function planer() {
+        var element = document.getElementById("fakta");
+        element.classList.remove("bilder", "planer", "laget", "fakta");
+        element.classList.add("planer");
+    }
+
+    function fakta() {
+        var element = document.getElementById("fakta");
+        element.classList.remove("bilder", "planer", "laget", "fakta");
+        element.classList.add("fakta");
+    }
+
+</script>
+</body>
+</html>
