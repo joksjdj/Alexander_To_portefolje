@@ -111,3 +111,68 @@ function pageSwitchButton() {
 }
 
 pageSwitchButton();
+
+async function animateSVG() {
+    const svgs = document.querySelectorAll(".backgroundSVG");
+
+    windowWidth = window.innerWidth;
+    windowHeight = window.innerHeight;
+
+    const svgPos = [];
+    svgs.forEach(svg => {
+
+        let maxWidth = windowWidth - svg.clientWidth;
+        let maxHeight = windowHeight - svg.clientHeight;
+        let xhitbox = svg.clientWidth;
+        let yhitbox = svg.clientHeight;
+
+        let x, y;
+        x = Math.floor(Math.random() * (maxWidth - 0 + 1)) + 0;
+        y = Math.floor(Math.random() * (maxHeight - 0 + 1)) + 0;
+
+        svg.style.left = `${x}px`;
+        svg.style.top = `${y}px`;
+
+        xDir = Math.random() < 0.5 ? -1 : 1;
+        yDir = Math.random() < 0.5 ? -1 : 1;
+
+        svgPos.push({x: x, y: y, xDir: xDir, yDir: yDir, xhitbox: xhitbox, yhitbox: yhitbox});
+
+    });
+
+    setInterval(() => {
+        let svgArrIndex = 0;
+        svgs.forEach(svg => {
+
+            maxWidth = windowWidth - svg.clientWidth;
+            maxHeight = windowHeight - svg.clientHeight;
+
+            let x = svgPos[svgArrIndex].x;
+            let y = svgPos[svgArrIndex].y;
+            let xDir = svgPos[svgArrIndex].xDir;
+            let yDir = svgPos[svgArrIndex].yDir;
+
+            x += + xDir;
+            y += + yDir;
+
+            if (x >= maxWidth || x <= 0) {
+                xDir *= -1;
+            }
+            if (y >= maxHeight || y <= 0) {
+                yDir *= -1;
+            }
+
+            svg.style.left = `${x}px`;
+            svg.style.top = `${y}px`;
+
+            svgPos[svgArrIndex].x = x;
+            svgPos[svgArrIndex].y = y;
+            svgPos[svgArrIndex].xDir = xDir;
+            svgPos[svgArrIndex].yDir = yDir;
+            
+            svgArrIndex++;
+
+        });
+    }, 16);
+}
+animateSVG();

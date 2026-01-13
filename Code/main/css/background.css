@@ -1,0 +1,82 @@
+@keyframes casino {
+    from {transform: rotate(50deg);}
+    to {transform: rotate(410deg);}
+}
+
+@keyframes crossword {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(-360deg);}
+}
+
+@keyframes gamepad {
+    0% {transform: rotate(34deg);}
+    25% {transform: rotate(124deg);}
+    50% {transform: rotate(214deg);}
+    75% {transform: rotate(304deg);}
+    100% {transform: rotate(394deg);}
+}
+
+@keyframes joystick {
+    from {transform: rotate(220deg);}
+    to {transform: rotate(-140deg);}
+}
+
+@keyframes cards {
+    from {transform: rotate(30deg);}
+    to {transform: rotate(20deg);}
+}
+
+@keyframes controller {
+    from {transform: rotate(28deg);}
+    to {transform: rotate(32deg);}
+}
+
+.background svg{
+    position: absolute;
+    width: auto;
+    height: 30%;
+    fill: var(--primary-color);
+    opacity: 30%;
+    z-index: -1;
+}
+.background {
+    overflow: none;
+    position: fixed; top: 0%; left: 0%;
+    width: 100%; height: 100%;
+}
+
+#chess{
+    animation: casino 10s infinite;
+}
+
+#poker{
+    animation: joystick 0.1s infinite;
+}
+
+#jigsaw{
+    animation: casino 5s infinite;
+}
+
+#casino{
+    animation: casino 5s infinite;
+}
+
+#crossword{
+    animation: crossword 5s infinite;
+}
+
+#gamepad{
+    animation: gamepad 3s infinite;
+}
+
+#joystick{
+    animation: joystick 1s infinite;
+}
+
+#cards{
+    animation: cards 0.5s infinite;
+}
+
+#controller{
+    animation: controller 0.5s infinite;
+}

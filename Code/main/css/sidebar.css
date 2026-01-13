@@ -1,0 +1,372 @@
+#buttonlogo{
+    visibility: hidden;
+}
+.phonemode .dontDisplaySVG {
+    display: none;
+}
+
+.pageSwitchButton p:hover {
+    cursor: var(--pointer);
+}
+
+.pageSwitchButton svg:hover {
+    cursor: var(--pointer);
+}
+
+button:hover {
+    cursor: var(--pointer);
+}
+
+.mainButtonContainer {
+    position: absolute; top: 0%; left: 0%;
+    width: 100%;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--secondary-text);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+
+    pointer-events: none;
+}
+.mainButtonContainer div {
+    pointer-events: auto;
+}
+.mainButtonContainer button {
+    pointer-events: auto;
+}
+
+.sidebutton svg{
+    fill: var(--text-color);
+    height: 100%;
+    width: 100%;
+}
+
+.sidebutton {
+    background-color: #00000000;
+    border: none;
+    width: 80px;
+    aspect-ratio: 1/1;
+    padding: 0;
+    margin: 0;
+    margin-left: 1%;
+}
+
+.mainTextButton {
+    width: 15%;
+    height: 80px;
+    font-size: 2vw;
+    display: flex;
+    justify-content: center;
+}
+.pcmode .mainTextButton {
+    align-items: center;
+}
+.phonemode .mainTextButton {
+    font-size: 110%;
+    width: auto;
+    flex-direction: column;
+    align-items: start;
+}
+
+.mainTextButton div {
+    width: 50%;
+}
+.phonemode .mainTextButton div {
+    max-height: 50%;
+    width: auto;
+    display: flex;
+}
+.mainTextButton p {
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    height: 100%;
+    max-height: 100% !important;
+    width: 100% !important;
+}
+
+#sidebackground {
+    fill: var(--primary-color);
+    opacity: 20%;
+    z-index: -1;
+    position: absolute; right: 0%;
+    width: 51%;
+}
+
+.phonemode #sidebackground {
+    visibility: hidden;
+}
+
+.sidebar {
+    position: fixed; top: 0%; left: -50%;
+    border: 5px solid var(--primary-color);
+    border-radius: 4svb;
+    box-sizing: border-box;
+    width: 0%;
+    height: 100%;
+    background-color: var(--base-variant);
+    visibility: hidden;
+    transition: 0.2s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.sidebarExtend {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+}
+
+.sidebar p{
+    background-color: var(--base-variant);
+    color: var(--text-color);
+    font-size: 2vw;
+    font-family: "Mouse Memoirs", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border: 5px groove var(--primary-color);
+    width: 30%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+.phonemode .sidebar p {
+    font-size: 6vw;
+}
+
+.sidebarExtend p:hover{
+    transform: scale(1.05);
+}
+
+.pageContainer {
+    position: absolute; top: 0%; right: 0%;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.pageContainer .pageSwitchButton {
+    width: 70%;
+    height: 20%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.pageContainer p {
+    width: 60%;
+    height: fit-content;
+    margin: 0%;
+}
+.phonemode .pageContainer p{
+    width: 90%;
+}
+
+.pageContainer svg {
+    width: 40%;
+    height: 100%;
+    margin: 0;
+    fill: var(--primary-color);
+}
+.phonemode .pageContainer svg{
+    display: none;
+}
+
+#projectsPage {
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsone {
+    position: relative; top: -25%;
+    width: 60%;
+    height: 70%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.textbutton {
+    width: 100% !important;
+}
+.phonemode .projectsone {
+    width: 90%;
+}
+
+.sidebar #devicePage {
+    visibility: hidden;
+}
+.sidebarExtend #devicePage{
+    position: absolute; right: 20px; bottom: 20px;
+    width: 60px;
+    height: 60px;
+    fill: var(--text-color);
+    visibility: visible;
+}
+#devicePage svg {
+    width: 100%;
+    height: 100%;
+}
+
+#themeswitch svg {
+    width: 100%;
+    height: 100%;
+}
+#themeswitch {
+    position: absolute; right: 100px; bottom: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    fill: var(--text-color);
+    z-index: 3;
+}
+
+#themeswitch svg:last-child{
+    display: none;
+}
+
+.light #themeswitch svg:first-child{
+    display: none;
+}
+
+.light #themeswitch svg:last-child{
+    display: block;
+}
+
+#themeswitch svg:hover {
+    cursor: var(--pointer);
+}
+
+#projectsPage img{
+    width: 20%;
+    visibility: hidden;
+    position: relative; top: 160%;
+}
+
+.hide {
+    visibility: hidden;
+    width: 100%;
+    min-height: 70%;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    align-items: center;
+}
+
+#projectsPage .textbutton:hover ~ .hide img {
+    visibility: visible;
+}
+.phonemode #projectsPage .textbutton:hover ~ .hide img {
+    visibility: hidden;
+}
+
+#css {
+    right: 7%;
+    rotate: -10deg;
+}
+
+#dance {
+    right: 4%;
+}
+
+#java {
+    right: 5%;
+    rotate: 215deg;
+}
+
+#mavericks {
+    right: 15%;
+    rotate: -15deg;
+}
+
+#html {
+    left: 3%;
+    rotate: -20deg;
+}
+
+#panda {
+    right: 23%;
+    rotate: 15deg;
+}
+
+@keyframes css {
+    from {top: 160%;}
+    50% {top: 20%;}
+    100% {top: 50%;}
+}
+
+#projectsPage .textbutton:hover ~ .hide #css{
+    animation: css 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes dance {
+    from {top: 160%;}
+    50% {top: 36%;}
+    100% {top: 46%;}
+}
+
+#projectsPage .textbutton:hover ~ .hide #dance{
+    animation: dance 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes java {
+    from {top: 160%;}
+    50% {top: 40%;}
+    100% {top: 60%;}
+}
+
+#projectsPage .textbutton:hover ~ .hide #java{
+    animation: java 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes mavericks {
+    from {top: 160%;}
+    50% {top: 30%;}
+    100% {top: 50%;}
+}
+
+#projectsPage .textbutton:hover ~ .hide #mavericks{
+    animation: mavericks 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes html {
+    from {top: 160%;}
+    50% {top: 30%;}
+    100% {top: 50%;}
+}
+
+#projectsPage .textbutton:hover ~ .hide #html{
+    animation: html 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+@keyframes panda {
+    from {top: 160%;}
+    50% {top: 30%;}
+    100% {top: 50%;}
+}
+
+#projectsPage .textbutton:hover ~ .hide #panda{
+    animation: panda 0.4s ease-in-out;
+    animation-fill-mode: forwards;
+}
